@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+{% block title proprety.title %}
+{% block body %}
+<div class="container mt-2">
+
+<div class="row">
+<div class="col-md-8">
+</div>
+
+<div class="col-md-4">
+<h1> {{ proprety.title }} </h1>
+<h2> {{ proprety.rooms }} pièce -{{proprety.surface }} m2 </h2>
+<div class="text-primary" style="font-size: 4rem; font-weight: bold;"> {{ proprety.formattedPrice }} dt
+</di>
+<a href="#" class ="btn btn-primary"> Contacter l'agence </a>
+</div>
+</div>
+<p>
+{{ proprety.description | nl2br }}
+</p>
+<h2> Caractéristiques <h2>
+<div class="row">
+<div class="col-md-8">
+<table class="table table-striped">
+<tr>
+<td>Surface habitable </td>
+<td>{{proprety.surface}}m2
+</td>
+</tr>
+<tr>
+<td> Pièces</td>
+<td> {{proprety.rooms}}</td>
+</tr>
+<tr>
+<td>Chambres </td>
+<td>{{proprety.bedrooms}}</td>
+</tr>
+<tr>
+<td>Etage</td>
+<td>{{ proprety.floor }}</td>
+</tr>
+<tr>
+<td> Chauffages </td>
+<td> {{proprety.heat}}
+</tr>
+</table></div>
+<div class="col-md-4">
+<h2> Spécificités </h2>
+</div>
+</div>
+</div>
+
+{% endblock %}
+
+
